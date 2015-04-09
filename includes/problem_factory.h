@@ -7,6 +7,7 @@
 #include "../problem/2.h"
 #include "../problem/3.h"
 #include "../problem/4.h"
+#include "../problem/5.h"
 
 class Problem_factory
 {
