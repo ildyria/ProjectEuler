@@ -1,12 +1,19 @@
 #include "2.h"
 
-void Problem_2::run();
+void Problem_2::run()
 {
 	int sum = 0;
-	for (int i = 0; i < 1000; ++i)
+
+	int u0 = 0;
+	int u1 = 1;
+	int temp;
+	while(u1  <= 4000000)
 	{
-		if(i % 5 == 0 || i % 3 == 0)
-			sum += i;
+		temp = u1;
+		u1 += u0;
+		u0 = temp; 
+		if(u1 % 2 == 0)
+			sum += u1;
 	}
 	printf("%d\n", sum);
 }
