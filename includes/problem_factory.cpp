@@ -11,6 +11,8 @@ Problem* Problem_factory::make(const int& i){
 			return new Problem_2();
 		case 3:
 			return new Problem_3();
+		case 4:
+			return new Problem_4();
 		default:
 			return new Problem();
 	}

@@ -2,7 +2,9 @@
 *.slo
 *.lo
 *.o
+*.d
 *.obj
+bin*
 
 # Precompiled Headers
 *.gch
