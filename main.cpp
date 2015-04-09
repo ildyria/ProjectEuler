@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
+#include "includes/typedef.h"
 #include "includes/args.h"
 #include "includes/problem.h"
 #include "includes/problem_factory.h"

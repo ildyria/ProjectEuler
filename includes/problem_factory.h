@@ -5,24 +5,13 @@
 #include "problem.h"
 #include "../problem/1.h"
 #include "../problem/2.h"
+#include "../problem/3.h"
 
 class Problem_factory
 {
-public:
 	Problem_factory();
 	~Problem_factory();
+public:
 
-	static Problem* make(const int& i){
-		printf("problem chosen : %d\n", i);
-
-		switch(i)
-		{
-			case 1:
-				return new Problem_1();
-			case 2:
-				return new Problem_2();
-			default:
-				return new Problem();
-		}
-	};
+	static Problem* make(const int& i);
 };

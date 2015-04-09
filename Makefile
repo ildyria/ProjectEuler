@@ -1,12 +1,12 @@
 CC=g++
 BIN=bin
-INCLUDE=-I problem
+INCLUDE=-I problem -I includes
 CFLAGS=-c -pedantic -O3 -Wall -std=c++11 $(INCLUDE)
 LDFLAGS=-std=c++11
-SOURCES=main.cpp 1.cpp 2.cpp
+SOURCES=problem_factory.cpp 1.cpp 2.cpp 3.cpp main.cpp
 OBJECTS=$(addprefix $(BIN)/, $(SOURCES:.cpp=.o))
 EXECUTABLE=$(BIN)/main
-vpath %.cpp problem
+vpath %.cpp problem:includes
 
 all: $(EXECUTABLE)
 
