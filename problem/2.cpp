@@ -1,6 +1,6 @@
-#include "1.h"
+#include "2.h"
 
-void Problem_1::run();
+void Problem_2::run();
 {
 	int sum = 0;
 	for (int i = 0; i < 1000; ++i)

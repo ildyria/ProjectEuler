@@ -2,23 +2,17 @@
 #include <stdio.h>
 #include <string>
 #include "includes/args.h"
-#include "problem/1.cpp"
+#include "includes/problem.h"
+#include "includes/problem_factory.h"
 
 int main(int argc, char const *argv[])
 {
 	int problem_chosen = read_args(argc, argv);
 
-	printf("problem chosen : %d\n", problem_chosen);
+	Problem* pb = Problem_factory::make(problem_chosen);
+	pb->run();
 
-	switch(problem_chosen)
-	{
-		case 1:
-			problem_1();
-		break;
-		default:
-			printf("not solved yet\n");
-		break;
-	}
+	delete pb;
 
 	return 0;
 }
