@@ -1,6 +1,4 @@
 #pragma once
-#include <vector>
-#include <math.h>
 #include "../includes/problem.h"
 
 class Problem_8 : public Problem

@@ -3,7 +3,7 @@ BIN=bin
 INCLUDE=-I problem -I includes
 CFLAGS=-c -pedantic -g -Wall -std=c++11 $(INCLUDE)
 LDFLAGS=-g -std=c++11
-SOURCES=problem_factory.cpp 1.cpp 2.cpp 3.cpp 4.cpp 5.cpp 6.cpp 7.cpp 8.cpp main.cpp
+SOURCES=problem_factory.cpp 1.cpp 2.cpp 3.cpp 4.cpp 5.cpp 6.cpp 7.cpp 8.cpp 9.cpp main.cpp
 OBJECTS=$(addprefix $(BIN)/, $(SOURCES:.cpp=.o))
 EXECUTABLE=$(BIN)/main
 vpath %.cpp problem:includes
