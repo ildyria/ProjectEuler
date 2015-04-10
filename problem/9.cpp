@@ -3,6 +3,7 @@
 void Problem_9::run()
 {
 	int a,b,c;
+	c=0;
 	for (a = 1; a < 1000; ++a)
 	{
 		for (b = a+1; b < 1000; ++b)
