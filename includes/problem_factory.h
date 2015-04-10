@@ -12,6 +12,7 @@
 #include "../problem/7.h"
 #include "../problem/8.h"
 #include "../problem/9.h"
+#include "../problem/10.h"
 
 class Problem_factory
 {

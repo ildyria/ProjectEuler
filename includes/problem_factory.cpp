@@ -23,6 +23,8 @@ Problem* Problem_factory::make(const int& i){
 			return new Problem_8();
 		case 9:
 			return new Problem_9();
+		case 10:
+			return new Problem_10();
 		default:
 			return new Problem();
 	}
