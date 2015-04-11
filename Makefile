@@ -3,10 +3,10 @@ BIN=bin
 INCLUDE=-I problem -I includes
 CFLAGS=-c -pedantic -O3 -Wall -std=c++11 $(INCLUDE)
 LDFLAGS=-std=c++11
-SOURCES=problem_factory.cpp main.cpp $(wildcard problem/*.cpp)
+SOURCES=problem_factory.cpp prime_list.cpp main.cpp $(wildcard problem/*.cpp)
 OBJECTS=$(addprefix $(BIN)/, $(notdir $(SOURCES:.cpp=.o)))
 EXECUTABLE=$(BIN)/main
-vpath %.cpp problem:includes
+vpath %.cpp problem:includes:tools
 
 all: $(EXECUTABLE)
 

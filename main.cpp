@@ -5,10 +5,17 @@
 #include "includes/args.h"
 #include "includes/problem.h"
 #include "includes/problem_factory.h"
+#include "tools/Prime_list.h"
 
 int main(int argc, char const *argv[])
 {
 	int problem_chosen = read_args(argc, argv);
+
+	if(problem_chosen == -1)
+	{
+		Prime_list* primes = new Prime_list();
+		primes->run();
+	}
 
 	Problem* pb = Problem_factory::make(problem_chosen);
 	pb->run();

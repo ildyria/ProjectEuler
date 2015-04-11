@@ -7,10 +7,10 @@
 int read_args(int& argc, char const* argv[])
 {
 	int i = 1;
-	// report settings
+
 	if (argc == 2)
 	{
-		i = strtol(argv[1],0,10) > 1 ? strtol(argv[1],0,10) : 1;
+		i = strtol(argv[1],0,10);
 	}
 	else
 	{
