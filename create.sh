@@ -6,6 +6,7 @@ echo $NUM
 TEMPFILE='problem/'$NUM'.h'
 touch $TEMPFILE
 FILE='#pragma once\n'
+FILE=${FILE}'#include <vector>\n'
 FILE=${FILE}'#include "../includes/problem.h"\n'
 FILE=${FILE}'\n'
 FILE=${FILE}'class Problem_'$NUM
