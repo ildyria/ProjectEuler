@@ -1,10 +1,28 @@
 #include "11.h"
 
+int Problem_11::Product_line(int i, int j, std::vector<std::vector<int>>& v)
+{
+	return v[i][j]*v[i][j+1]*v[i][j+2]*v[i][j+3];
+}
 
+int Problem_11::Product_col(int i, int j, std::vector<std::vector<int>>& v)
+{
+	return v[i][j]*v[i+1][j]*v[i+2][j]*v[i+3][j];
+}
+
+int Problem_11::Product_diag1(int i, int j, std::vector<std::vector<int>>& v)
+{
+	return v[i][j]*v[i+1][j-1]*v[i+2][j-2]*v[i+3][j-3];
+}
+
+int Problem_11::Product_diag2(int i, int j, std::vector<std::vector<int>>& v)
+{
+	return v[i][j]*v[i+1][j+1]*v[i+2][j+2]*v[i+3][j+3];
+}
 
 void Problem_11::run()
 {
-	std::vector<std::vector<short>> v = {
+	std::vector<std::vector<int>> v = {
 		{ 8, 2,22,97,38,15, 0,40, 0,75, 4, 5, 7,78,52,12,50,77,91, 8},
 		{49,49,99,40,17,81,18,57,60,87,17,40,98,43,69,48, 4,56,62, 0},
 		{81,49,31,73,55,79,14,29,93,71,40,67,53,88,30, 3,49,13,36,65},
@@ -27,15 +45,42 @@ void Problem_11::run()
 		{ 1,70,54,71,83,51,54,69,16,92,33,48,61,43,52, 1,89,19,67,48}
 	};
 
+	int temp = 0;
+	int max_val = 0;
 	for (unsigned int i = 0; i < v.size(); ++i)
 	{
 		for (unsigned int j = 0; j < v[i].size(); ++j)
 		{
-			printf("%3d", v[i][j]);;
+
+			if(v[i][j] == 0)
+			{
+				// no need to check... anything times 0 ...
+			}
+			else if(i < v.size() - 3)
+			{
+				temp = Product_col(i,j,v);
+				set_max(max_val, temp);
+				if(j < v[i].size() - 3)
+				{
+					temp = Product_col(i,j,v);
+					set_max(max_val, temp);
+					temp = Product_diag2(i,j,v);
+					set_max(max_val, temp);
+				}
+
+				if (j > 2)
+				{
+					temp = Product_diag1(i,j,v);
+					set_max(max_val, temp);
+				}
+
+			}
+			else if(j < v[i].size())
+			{
+				temp = Product_line(i,j,v);
+				set_max(max_val, temp);
+			}
 		}
-		std::cout << std::endl;
 	}
-
-
-
+	printf("%d\n", max_val);
 }
