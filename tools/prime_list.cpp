@@ -1,9 +1,9 @@
 #include "prime_list.h"
 
-std::vector<int> Prime_list::dividors(int n)
+std::vector<int> Prime_list::prime_factorisation(int n)
 {
 	int num_prime = 0;
-	while(primes[num_prime] < n)++num_prime;
+	while(primes[num_prime] <= n)++num_prime;
 
 	std::vector<int> res = std::vector<int>(num_prime,0);
 
@@ -22,6 +22,34 @@ std::vector<int> Prime_list::dividors(int n)
 	}
 
 	return res;
+}
+
+std::vector<int> Prime_list::divisor_list(const std::vector<int>& primeMultiplicity) {
+	std::vector<int> resultList = std::vector<int>();
+	resultList.push_back(1);
+
+
+	std::vector<int> powers = std::vector<int>(0);
+	for (u_int i = 0; i < primeMultiplicity.size(); ++i)
+	{
+		int p = 1;
+		for (int j = 0; j < primeMultiplicity[i]; ++j)
+		{
+			p*=primes[i];
+			powers.push_back(p);
+		}
+
+		int prev_size = resultList.size();
+		for(int j = 0; j < prev_size; j++)
+		{
+			for (u_int k = 0; k < powers.size(); ++k)
+			{
+				resultList.push_back(resultList[j]*powers[k]);
+			}
+		}
+		powers.clear();
+	}
+	return resultList;
 }
 
 int Prime_list::pow(int n, int p)

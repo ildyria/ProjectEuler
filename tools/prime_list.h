@@ -16,5 +16,6 @@ public:
 	std::vector<int>* get();
 
 	int pow(int n, int p);
-	std::vector<int> dividors(int n);
+	std::vector<int> prime_factorisation(int n);
+	std::vector<int> divisor_list(const std::vector<int>& primeMultiplicity);
 };
