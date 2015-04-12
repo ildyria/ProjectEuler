@@ -14,4 +14,7 @@ public:
 	~Prime_list() {};
 	void run();
 	std::vector<int>* get();
+
+	int pow(int n, int p);
+	std::vector<int> dividors(int n);
 };
