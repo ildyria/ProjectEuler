@@ -13,6 +13,7 @@
 #include "../problem/16.h"
 #include "../problem/17.h"
 #include "../problem/18.h"
+#include "../problem/19.h"
 #include "../problem/2.h"
 #include "../problem/3.h"
 #include "../problem/4.h"
