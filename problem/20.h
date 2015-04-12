@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "../includes/problem.h"
+#include "../tools/prime_list.h"
 
 class Problem_20 : public Problem
 {

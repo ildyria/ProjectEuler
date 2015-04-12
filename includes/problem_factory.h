@@ -15,6 +15,7 @@
 #include "../problem/18.h"
 #include "../problem/19.h"
 #include "../problem/2.h"
+#include "../problem/20.h"
 #include "../problem/3.h"
 #include "../problem/4.h"
 #include "../problem/5.h"
