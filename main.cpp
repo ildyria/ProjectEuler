@@ -15,6 +15,7 @@ int main(int argc, char const *argv[])
 	{
 		Prime_list* primes = new Prime_list();
 		primes->run();
+		return 0;
 	}
 
 	Problem* pb = Problem_factory::make(problem_chosen);
