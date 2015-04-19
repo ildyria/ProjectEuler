@@ -5,7 +5,7 @@
 #include "includes/args.h"
 #include "includes/problem.h"
 #include "includes/problem_factory.h"
-#include "tools/Prime_list.h"
+#include "tools/prime_list.h"
 
 int main(int argc, char const *argv[])
 {
