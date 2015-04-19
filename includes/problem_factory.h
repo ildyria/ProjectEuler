@@ -10,6 +10,7 @@
 #include "../problem/10.h"
 #include "../problem/9.h"
 #include "../problem/16.h"
+#include "../problem/24.h"
 #include "../problem/23.h"
 #include "../problem/6.h"
 #include "../problem/19.h"
