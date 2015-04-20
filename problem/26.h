@@ -1,5 +1,5 @@
 #pragma once
-#include <vector>
+#include <list>
 #include "../includes/problem.h"
 
 class Problem_26 : public Problem
