@@ -6,6 +6,7 @@
 #include "includes/problem.h"
 #include "includes/problem_factory.h"
 #include "tools/prime_list.h"
+#include "tools/big_int.h"
 
 int main(int argc, char const *argv[])
 {
