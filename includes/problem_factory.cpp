@@ -55,6 +55,8 @@ Problem* Problem_factory::make(const int& i){
 			return new Problem_22();
 		case 17:
 			return new Problem_17();
+		case 27:
+			return new Problem_27();
 		case 11:
 			return new Problem_11();
 		default:

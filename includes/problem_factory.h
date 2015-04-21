@@ -28,6 +28,7 @@
 #include "../problem/3.h"
 #include "../problem/22.h"
 #include "../problem/17.h"
+#include "../problem/27.h"
 #include "../problem/11.h"
 
 class Problem_factory
