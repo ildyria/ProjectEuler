@@ -7,6 +7,7 @@
 #include "../problem/12.h"
 #include "../problem/8.h"
 #include "../problem/2.h"
+#include "../problem/28.h"
 #include "../problem/10.h"
 #include "../problem/9.h"
 #include "../problem/16.h"
