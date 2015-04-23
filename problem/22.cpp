@@ -14,12 +14,14 @@ void Problem_22::run()
 
 		char * buffer = new char [length];
 
-		std::cout << "Reading " << length << " characters... "  << std::endl;
+		// std::cout << "Reading " << length << " characters... "  << std::endl;
 		// read data as a block:
 		is.read (buffer,length);
 
 		if (is)
-			std::cout << "all characters read successfully." << std::endl;
+		{
+			// std::cout << "all characters read successfully." << std::endl;
+		}
 		else
 			std::cout << "error: only " << is.gcount() << " could be read" << std::endl;
 		is.close();
@@ -51,7 +53,7 @@ void Problem_22::run()
 
 		u_long sum = 0;
 		u_int val_name;
-		std::cout << string_vect.size() << std::endl;
+		// std::cout << string_vect.size() << std::endl;
 		for (u_int i = 0; i < string_vect.size(); ++i)
 		{
 			val_name = 0;

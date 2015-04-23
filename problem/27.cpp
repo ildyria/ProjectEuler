@@ -63,7 +63,7 @@ void Problem_27::run()
 		i++;
 		b = primes[i];
 	}
-	printf("a : %d, b : %d, count : %d \n",a_saved,b_saved,count_saved);
+	// printf("a : %d, b : %d, count : %d \n",a_saved,b_saved,count_saved);
 	printf("%d\n",a_saved*b_saved);
 }
 

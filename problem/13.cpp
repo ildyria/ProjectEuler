@@ -144,12 +144,12 @@ void Problem_13::run()
 			{
 				print = true;
 				nb_digits = i;
-				std::cout << (nb_digits+1) << " digits" <<  std::endl;
+				// std::cout << (nb_digits+1) << " digits" <<  std::endl;
 			}
-		if(print) std::cout << result[i];
+		// if(print) std::cout << result[i];
 		i--;
 	}
-	std::cout << std::endl;
+	// std::cout << std::endl;
 	for (int i = nb_digits; i > nb_digits-10; --i)
 	{
 		std::cout << result[i];

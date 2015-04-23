@@ -49,7 +49,7 @@ void Problem_26::run()
 		}
 	}
 
-	printf("num : %d\n", found);
-	printf("length : %d\n", length);
+	printf("%d\n", found);
+	// printf("length : %d\n", length);
 }
 

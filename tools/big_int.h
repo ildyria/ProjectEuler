@@ -25,6 +25,11 @@ struct BigInt
 	BigInt operator*(const BigInt & bi) const;
 	BigInt operator*(int n) const;
 	BigInt operator<<(int n) const;
+
+	bool operator==(const BigInt & bi);
+	bool operator<(const BigInt & bi);
+
+	void compact();
 };
 
 typedef const BigInt & BICR;
@@ -94,6 +99,7 @@ struct Borrow
 		return n;
 	}
 };
+
 
 
 /*

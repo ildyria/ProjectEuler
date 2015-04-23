@@ -1,6 +1,8 @@
 #pragma once
-#include <vector>
+#include <list>
+#include <string>
 #include "../includes/problem.h"
+#include "../tools/big_int.h"
 
 class Problem_29 : public Problem
 {

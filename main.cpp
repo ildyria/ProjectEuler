@@ -7,6 +7,7 @@
 #include "includes/problem_factory.h"
 #include "tools/prime_list.h"
 #include "tools/big_int.h"
+#include "tools/Timer.h"
 
 int main(int argc, char const *argv[])
 {
@@ -20,8 +21,13 @@ int main(int argc, char const *argv[])
 	}
 
 	Problem* pb = Problem_factory::make(problem_chosen);
-	pb->run();
 
+	Timer t = Timer();
+	t.start();
+	pb->run();
+	t.stop();
+
+	printf("done in : %.3lf ms\n", t.resultmus()/1000.0);
 	delete pb;
 
 	return 0;

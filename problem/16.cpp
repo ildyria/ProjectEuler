@@ -18,13 +18,13 @@ void Problem_16::run()
 		if(num[decimal + 1] > 0) decimal++;
 	}
 
-	printf("%d\n", decimal);
+	// printf("%d\n", decimal);
 	short sum = 0;
 	for (int i = decimal; i >= 0; --i)
 	{
 		sum += num[i];
-		printf("%d", num[i]);
+		// printf("%d", num[i]);
 	}
-	printf("\n");
+	// printf("\n");
 	printf("%d\n", sum);
 }

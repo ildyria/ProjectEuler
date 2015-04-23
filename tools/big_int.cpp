@@ -2,6 +2,31 @@
 
 BigInt::BigInt(std::string str) { transform(str.rbegin(),str.rend(),back_inserter(digits),Ascii2Int()); }
 
+bool BigInt::operator==(const BigInt& bi)
+{
+	if(digits.size() != bi.digits.size()) return false;
+
+	for (unsigned int i = 0; i < digits.size(); ++i)
+	{
+		if (digits[i] != bi.digits[i]) return false;
+	}
+	return true;
+}
+
+bool BigInt::operator<(const BigInt& bi)
+{
+	if(digits.size() < bi.digits.size()) return true;
+	if(digits.size() > bi.digits.size()) return false;
+
+	for (int i = static_cast<int>(digits.size()) - 1; i >= 0; --i)
+	{
+		if (digits[i] < bi.digits[i]) return true;
+		if (digits[i] > bi.digits[i]) return false;
+	}
+	return false; // equality
+}
+
+
 BigInt & BigInt::operator+=(BICR bi)
 {
 	if (digits.size()<bi.digits.size())
@@ -111,6 +136,14 @@ BigInt BigInt::operator-(BICR bi) const { BigInt result(*this); return (result-=
 BigInt BigInt::operator*(int n) const { BigInt result(*this); return (result*=n); }
 BigInt BigInt::operator*(BICR bi) const { BigInt result(*this); return (result*=bi); }
 BigInt BigInt::operator<<(int n) const { BigInt result(*this); return (result<<=n); }
+
+void BigInt::compact()
+{
+	while (digits.back() == 0 && !digits.empty())
+	{
+		digits.pop_back();
+	}
+}
 
 void split(BICR op1, BICR op2, BIR x0, BIR x1, BIR y0, BIR y1, int & m)
 {

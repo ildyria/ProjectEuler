@@ -17,8 +17,8 @@ void Problem_25::run()
 
 	for (auto it = u1.digits.rbegin(); it != u1.digits.rend(); ++it)
 	{
-		printf("%d", *it);		/* code */
+		// printf("%d", *it);		/* code */
 	}
-	printf("\n");		/* code */
+	// printf("\n");		/* code */
 	printf("%d\n", term_num);
 }

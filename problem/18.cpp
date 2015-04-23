@@ -67,8 +67,6 @@ void Problem_18::run()
 	{
 		set_max(max,triangle_sol[num-1][i]);
 	}
-
-	printf("----------------\n");
 	printf("%d\n", max);
 }
 
